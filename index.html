@@ -24,21 +24,21 @@ main{max-width:1020px;margin:0 auto;padding:28px 20px 80px}
 .nav a{display:inline-block;padding:7px 14px;border:1px solid #b9c88c;background:#ffffffb8;border-radius:30px;font-size:13px;text-decoration:none}
 .section-title{text-align:center;margin:52px 0 28px;color:#425b20;font-size:24px;letter-spacing:.18em;font-weight:500}
 .section-title:after{content:"";display:block;width:110px;height:1px;background:var(--gold);margin:12px auto}
-.timeline{position:relative;margin:0 auto;max-width:850px}
+.timeline{position:relative;margin:0 auto;max-width:660px}
 .timeline:before{content:"";position:absolute;left:113px;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),#a8c65b,var(--gold))}
 .item{display:grid;grid-template-columns:92px 1fr;gap:42px;position:relative;margin:0 0 25px}
 .year{font: bold 18px Georgia,serif;text-align:right;color:#647f25;padding-top:22px}
 .year:after{content:"";position:absolute;left:106px;top:28px;width:14px;height:14px;border-radius:50%;background:#f7f5df;border:3px solid #91ad3b;box-shadow:0 0 0 4px #e5ebce}
 .event{background:linear-gradient(135deg,#fffef8,#f8f9ed);border:1px solid #d6ddc1;border-left:4px solid #a7c83b;padding:18px 22px 17px;box-shadow:0 5px 18px #34451a0c;position:relative}
 .event:before{content:"";position:absolute;top:25px;left:-11px;border-width:7px 7px 7px 0;border-style:solid;border-color:transparent #d6ddc1 transparent transparent}
-.date{font:12px Georgia,serif;letter-spacing:.12em;color:#8a7134}
+.date{font:12px Georgia,serif;font-weight:bold;letter-spacing:.12em;color:#8a7134}
 .event h3{font-size:18px;line-height:1.55;margin:5px 0 8px;color:#344a1e;font-weight:600}
 .event p{margin:0 0 10px;font-size:14px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}
 .tag{font:11px sans-serif;padding:3px 9px;border-radius:20px;background:#eaf1d2;color:#536b25}
 .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.links a{font:12px sans-serif;padding:6px 10px;border:1px solid #c8d3a7;border-radius:3px;background:#fff;text-decoration:none}
-.links a.primary{background:#526d2a;color:#fff;border-color:#526d2a}
+.links a{font:12px sans-serif;padding:6px 10px;border:1px solid #c8d3a7;border-radius:3px;background:#fff;color:#526d2a;text-decoration:none}
+.links a.primary{background:#fff;color:#526d2a;border-color:#c8d3a7}
 .note{font-size:12px;color:var(--muted);background:#f0f3e4;border-left:3px solid #b5c77b;padding:12px 15px;margin:25px 0}
 .sources{background:#fffdf5;border:1px solid #d8dfc3;padding:24px;margin-top:60px}
 .sources h2{margin:0 0 12px;font-size:20px;text-align:center;color:#425b20;letter-spacing:.1em}
@@ -56,6 +56,24 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
 .item.year-start .date{font-weight:bold;color:#80642a}
 @media(max-width:620px){.item.year-start{margin-top:36px;padding-top:15px}.item.year-start .year{padding:5px 2px;font-size:13px}}
 
+
+.controls{max-width:860px;margin:0 auto 8px;padding:14px 16px;background:#fffdf4;border:1px solid #d8c88f;border-radius:10px;box-shadow:0 3px 12px #34451a10}
+.controls input[type=search]{width:100%;box-sizing:border-box;padding:9px 12px;font-size:15px;border:1px solid #c6b477;border-radius:8px;background:#fff;color:#333}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{border:1px solid #b58a36;background:#fff8df;color:#6b5518;border-radius:999px;padding:4px 11px;font-size:12.5px;cursor:pointer}
+.chip.active{background:#526b2b;border-color:#526b2b;color:#fff}
+.count-line{margin-top:9px;font-size:12.5px;color:#8a7134}
+#todayBox{max-width:860px;margin:0 auto 18px;padding:14px 18px;background:linear-gradient(135deg,#fffef9,#f3f6e6);border:1px solid #c7aa5b;border-left:5px solid #b58a36;border-radius:10px;box-shadow:0 5px 16px #34451a12}
+#todayBox .tb-label{font-size:12px;letter-spacing:.14em;color:#8a7134;font-weight:bold}
+#todayBox .tb-title{font-size:16.5px;font-weight:600;color:#344a1e;margin:4px 0 2px}
+#todayBox .tb-sub{font-size:13px;color:#555}
+#todayBox a{color:#526b2b;font-weight:600}
+.thumb{display:block;margin:2px 0 10px;border-radius:8px;overflow:hidden;line-height:0;max-width:480px;position:relative}
+.thumb img{width:100%;height:auto;display:block}
+.thumb::after{content:"▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;padding-left:5px;box-sizing:border-box;line-height:1;opacity:0;transition:opacity .18s ease;pointer-events:none}
+.thumb:hover::after{opacity:1}
+@media(max-width:620px){.thumb img{height:auto}}
+.no-results{display:none;max-width:860px;margin:0 auto;padding:22px;text-align:center;color:#8a7134;background:#fffdf4;border:1px dashed #c6b477;border-radius:10px}
 </style>
 </head>
 <body>
@@ -67,7 +85,7 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
 </header>
 <main>
  <section class="intro">
-  <strong>なな湖さんの歩みを、動画・配信・本人発信とともにたどる記録。</strong><br>
+  <strong>なな湖の歩みを、動画・配信・本人発信とともにたどる記録。</strong><br>
   ニコニコ動画での実況活動から、琵琶湖ちゃぷちゃぷブラザーズ、高田村での企画、<br>イベント・音楽活動まで。<br>
   記載内容は公開情報をもとに構成した非公式のファン向け年表です。
  </section>
@@ -75,12 +93,25 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
   <a href="#2008">2008–2010</a><a href="#2011">2011–2018</a><a href="#2021">2021</a><a href="#2022">2022</a><a href="#2023">2023</a><a href="#2024">2024</a><a href="#2025">2025</a><a href="#2026">2026</a>
  </nav>
  <h2 class="section-title">THE TIMELINE</h2>
+
+ <div id="todayBox" hidden></div>
+ <div class="controls">
+  <input type="search" id="searchBox" placeholder="キーワードで探す（例：ライブ、ポケカ、ぬーすけ先輩）">
+  <div class="chips" id="tagChips"></div>
+  <div class="count-line" id="countLine"></div>
+ </div>
  <div class="timeline">
   <article class="item" id="2008"><div class="year">2008</div><div class="event">
    <div class="date">2008.11.07 / 2008.11.24</div><h3>ゲーム実況活動を開始</h3>
    <p>本人の初投稿は『サモンナイト』実況（11月7日）。現在確認できる最古の公開実況動画として『やきゅつく』実況（11月24日）が紹介されている。15周年記念動画では、活動を続けてきた年月を振り返っている。</p>
    <div class="tags"><span class="tag">ニコニコ動画</span><span class="tag">活動開始</span></div>
-   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=5JiGCC6aJy4" target="_blank" rel="noopener">15周年記念動画</a><a href="https://www.nicovideo.jp/user/1593801709" target="_blank" rel="noopener">ニコニコユーザーページ</a><a href="https://x.com/search?q=from%3Aosya_775%20%E5%AE%9F%E6%B3%8115%E5%91%A8%E5%B9%B4&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+   <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm5346527" target="_blank" rel="noopener">最古の公開動画『やきゅつく』を見る</a><a href="https://www.youtube.com/watch?v=5JiGCC6aJy4" target="_blank" rel="noopener">15周年記念動画</a><a href="https://x.com/search?q=from%3Aosya_775%20%E5%AE%9F%E6%B3%8115%E5%91%A8%E5%B9%B4&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+  </div></article>
+  <article class="item" id="2010"><div class="year">2010</div><div class="event">
+   <div class="date">2010.12.10</div><h3>出世作『絶対に避けたい実況プレイマナー講座』を投稿</h3>
+   <p>ニコニコ動画に投稿したマナー講座シリーズが、2011年10月に紹介動画で取り上げられたことを契機にランキング入りし、爆発的ヒット。当時実況していた「のび太のFinal Fantasy」シリーズと共に、なな湖の名が広く知られる転機となった。</p>
+   <div class="tags"><span class="tag">ニコニコ動画</span><span class="tag">出世作</span></div>
+   <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm12990262" target="_blank" rel="noopener">動画を見る（基礎編）</a><a href="https://www.inside-games.jp/article/2022/02/12/136770.html" target="_blank" rel="noopener">インサイド記事</a><a href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
   </div></article>
   <article class="item" id="2011"><div class="year">2011</div><div class="event">
    <div class="date">2011.11.02</div><h3>ぬーすけ先輩とのゲーム実況動画初投稿</h3>
@@ -88,101 +119,221 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
    <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">コンビ活動</span></div>
    <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm16054145" target="_blank" rel="noopener">初投稿動画を観る</a><a href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">なな湖YouTube</a><a href="https://x.com/search?q=from%3Aosya_775%20%E3%81%AC%E3%83%BC%E3%81%99%E3%81%91%E5%85%88%E8%BC%A9&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
+  <article class="item" id="2015"><div class="year">2015</div><div class="event">
+   <div class="date">2015.02.28</div><h3>「ときめきメモリアルGS実況者ラジオ」を企画</h3>
+   <p>代表作であるときメモGS・GS2実況にちなみ、GSシリーズの実況経験者を集めたラジオ「ときめきメモリアルGS実況者ラジオ ～はばたく恋の同窓会スペシャル～」を企画した。</p>
+   <div class="tags"><span class="tag">ときメモGS</span><span class="tag">企画</span><span class="tag">ラジオ</span></div>
+   <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm25922754" target="_blank" rel="noopener">第1回（♯1）を聴く</a><a href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2015</div><div class="event">
+   <div class="date">2015年頃</div><h3>活動名を「ななこ」から「なな湖」に改名</h3>
+   <p>出身地・滋賀県の琵琶湖にちなみ、活動名を「ななこ」から「なな湖」へ改名したとされる。現在の名義の起点。</p>
+   <div class="tags"><span class="tag">改名</span><span class="tag">ニコニコ動画</span></div>
+   <div class="links"><a class="primary" href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2015</div><div class="event">
+   <div class="date">2015.09.06</div><h3>闘TV（ニコニコ公式チャンネル）に初出演</h3>
+   <p>闘TV『レトロゲーム傑作選 22時間ぶっ通しゲーム実況』に出演。以後、闘TVの公式番組への出演が続くようになる、公式生放送デビュー。</p>
+   <div class="tags"><span class="tag">闘TV</span><span class="tag">公式番組</span></div>
+   <div class="links"><a class="primary" href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
+  </div></article>
   <article class="item" id="2016"><div class="year">2016</div><div class="event">
+   <div class="date">2016.01.30 / 01.31</div><h3>闘会議2016に出演</h3>
+   <p>幕張メッセで開催された闘会議2016に出演し、マリオカート アーケードグランプリのステージMC等を担当。公式リアルイベント出演の初期の記録。</p>
+   <div class="tags"><span class="tag">闘会議</span><span class="tag">リアルイベント</span></div>
+   <div class="links"><a class="primary" href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2016</div><div class="event">
+   <div class="date">2016</div><h3>「人狼最大トーナメント」に出演開始</h3>
+   <p>スナパイに誘われ、ニコニコ生放送の人気人狼番組「人狼最大トーナメント」に2016年から出演。当時の番組告知記事にも出演者として名が載っている。高田健志がなな湖の人狼プレイヤーとしての魅力に目を付けたのもこの頃とされる。</p>
+   <div class="tags"><span class="tag">人狼最大トーナメント</span><span class="tag">人狼</span><span class="tag">ニコニコ生放送</span></div>
+   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2016</div><div class="event">
+   <div class="date">2016</div><h3>4人組ユニット「神殿花鳥」を結成</h3>
+   <p>とりっぴぃら実況者仲間と4人組ユニット「神殿花鳥」を結成し、なな湖は「花」担当に。後のニコニコ超会議2019への神殿花鳥としての出演にもつながった。</p>
+   <div class="tags"><span class="tag">神殿花鳥</span><span class="tag">ユニット</span></div>
+   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2016</div><div class="event">
    <div class="date">2016.08.19</div><h3>「混ぜるな危険」のメンバーが集まる</h3>
    <p>先端恐怖症、にどみ、ズズ、とりっぴぃ、こいろ（５）、mega、なな湖、バケゆか、九血鬼、タラチオ、愛の戦士、鶏のなんこつから揚げ（敬称略）による「混ぜるな危険人狼」が開催される。後に「混ぜメン」と呼ばれるメンバーの最初の企画。</p>
    <div class="tags"><span class="tag">混ぜるな危険</span><span class="tag">コラボ企画</span></div>
    <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm29519540" target="_blank" rel="noopener">混ぜるな危険人狼初回</a><a href="https://x.com/search?q=from%3Aosya_775%20%E6%B7%B7%E3%81%9C%E3%82%8B%E3%81%AA%E5%8D%B1%E9%99%BA&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
+  <article class="item" id="2017"><div class="year">2017</div><div class="event">
+   <div class="date">2017.06.03</div><h3>闘TV『ゲーム実況者のど自慢』で優勝</h3>
+   <p>闘TVの歌唱企画『ゲーム実況者のど自慢（1周年）』で、MCを務めながら「銀河鉄道の夜」を歌唱して優勝。歌唱力で注目されるきっかけの一つとなった。</p>
+   <div class="tags"><span class="tag">闘TV</span><span class="tag">歌唱</span><span class="tag">優勝</span></div>
+   <div class="links"><a class="primary" href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
+  </div></article>
   <article class="item"><div class="year">2017</div><div class="event">
    <div class="date">2017.07.08</div><h3>なな湖の元気が出るライブ「POWER」開催</h3>
-   <p>なな湖によるライブイベント「POWER」を開催。</p>
+   <p>なな湖によるライブイベント「POWER」を開催。後に「POWER×POWER」（2019年）、「POWER×POWER×POWER」（同年）と続いていく、なな湖主催ライブシリーズの原点となった。</p>
    <div class="tags"><span class="tag">主催ライブ</span><span class="tag">音楽活動</span></div>
    <div class="links"><a class="primary" href="https://x.com/search?q=from%3Aosya_775%20POWER%202017&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
-  <article class="item" id="2017"><div class="year">2017</div><div class="event">
+  <article class="item"><div class="year">2017</div><div class="event">
    <div class="date">2017.10.17</div><h3>YouTubeチャンネルを開設</h3>
    <p>「なな湖なな湖」チャンネルの開設日。ニコニコ動画を起点とした活動が、YouTubeにも広がっていく。</p>
    <div class="tags"><span class="tag">YouTube</span><span class="tag">活動拠点</span></div>
    <div class="links"><a class="primary" href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">チャンネルを見る</a></div>
   </div></article>
   <article class="item" id="2018"><div class="year">2018</div><div class="event">
+   <div class="date">2018.01</div><h3>実写旅行シリーズ「ふぁぼ稼ぎ旅行」が開始</h3>
+   <p>ぬーすけ先輩が撮影・編集を担当する実写旅行企画シリーズが開始。「人間なのか」と疑われていたぬーすけ先輩が初めて実写で姿を見せたことでも話題になった、琵琶ちゃぷの看板シリーズの一つ。</p>
+   <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">実写</span><span class="tag">旅行企画</span></div>
+   <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm32666063" target="_blank" rel="noopener">シリーズ第1回を見る</a><a href="http://dic.nicovideo.jp/a/%E3%81%AC%E3%83%BC%E3%81%99%E3%81%91%E5%85%88%E8%BC%A9" target="_blank" rel="noopener">ニコニコ大百科「ぬーすけ先輩」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2018</div><div class="event">
    <div class="date">2018.07.08</div><h3>コンビ名「琵琶湖ちゃぷちゃぷブラザーズ」命名</h3>
-   <p>ニコニコ動画になな湖さんが投稿した「絶対助かるつもり巨影都市　＃4」の中で、突如ぬーすけ先輩が「どうも～～～！！琵琶湖ちゃぷちゃぷブラザーズです～～！」と発する。以降、公式番組等でなな湖さんが「琵琶湖ちゃぷちゃぷブラザーズのなな湖です」と名乗ることが増えていき、いつしかコンビ名として定着することとなる。</p>
+   <p>ニコニコ動画になな湖が投稿した「絶対助かるつもり巨影都市　＃4」の中で、突如ぬーすけ先輩が「どうも～～～！！琵琶湖ちゃぷちゃぷブラザーズです～～！」と発する。以降、公式番組等でなな湖が「琵琶湖ちゃぷちゃぷブラザーズのなな湖です」と名乗ることが増えていき、いつしかコンビ名として定着することとなる。</p>
    <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">コンビ名</span><span class="tag">命名</span></div>
    <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/sm33493854?from=302" target="_blank" rel="noopener">命名の瞬間を見る</a></div>
   </div></article>
-  <article class="item"><div class="year">2019</div><div class="event">
+  <article class="item"><div class="year">2018</div><div class="event">
+   <div class="date">2018.11.03</div><h3>ニコニコ超パーティー2018に出演</h3>
+   <p>さいたまスーパーアリーナで開催されたニコニコ超パーティー2018に出演し歌唱。本人が長年出演を熱望していた大舞台で、ニコニコ時代の到達点の一つ。</p>
+   <div class="tags"><span class="tag">ニコニコ超パーティー</span><span class="tag">歌唱</span><span class="tag">リアルイベント</span></div>
+   <div class="links"><a class="primary" href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a></div>
+  </div></article>
+  <article class="item" id="2019"><div class="year">2019</div><div class="event">
    <div class="date">2019.02.02</div><h3>「POWER✖️POWER（ぱわぱわ）」開催</h3>
-   <p>「なな湖の元気が出るライブ POWER」の続編となるライブイベントを開催。</p>
+   <p>「なな湖の元気が出るライブ POWER」の続編となるライブイベントを開催。タイトルの「ぱわぱわ」の通称でも親しまれている。</p>
    <div class="tags"><span class="tag">主催ライブ</span><span class="tag">音楽活動</span></div>
    <div class="links"><a class="primary" href="https://youtube.com/playlist?list=PLZnTfSlVxdss&si=Ppp3x5gt6ExuWnvK" target="_blank" rel="noopener">セトリ再生リスト</a><a href="https://x.com/search?q=from%3Aosya_775%20%E3%81%B1%E3%82%8F%E3%81%B1%E3%82%8F&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
   <article class="item"><div class="year">2019</div><div class="event">
    <div class="date">2019.11.23</div><h3>「POWER✖️POWER✖️POWER（ぱわぱわぱわ）」開催</h3>
-   <p>「POWER」シリーズ第3弾となるライブイベントを開催。</p>
+   <p>「POWER」シリーズ第3弾となるライブイベントを開催。2017年の第1弾から続く主催ライブの系譜が、ここで三部作の形となった。会場は大阪・ESAKA MUSE。</p>
    <div class="tags"><span class="tag">主催ライブ</span><span class="tag">音楽活動</span></div>
    <div class="links"><a class="primary" href="https://youtube.com/playlist?list=PLH3qV8EedOOA&si=xPFq2PlM9wkNkn4k" target="_blank" rel="noopener">セトリ再生リスト</a><a href="https://x.com/search?q=from%3Aosya_775%20%E3%81%B1%E3%82%8F%E3%81%B1%E3%82%8F%E3%81%B1%E3%82%8F&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
   <article class="item" id="2021"><div class="year">2021</div><div class="event">
+   <div class="date">2021.02.06</div><h3>ポケカ動画「無知のふりしてポケカ博士に勝負を挑んでみた」が大ヒット</h3>
+   <p>『【ポケカ】超初心者が無知のふりしてポケカ博士に勝負を挑んでみた【打倒とりっぴぃ】』を公開。再生数は約79.8万回で、チャンネル歴代3位（再生数は2026年11月27日時点）。ポケカ動画シリーズの代表作となった。</p>
+   <div class="tags"><span class="tag">ポケモンカード</span><span class="tag">人気動画</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=zT0DHO0BbUY" target="_blank" rel="noopener">動画を見る</a></div>
+  </div></article>
+  <article class="item"><div class="year">2021</div><div class="event">
+   <div class="date">2021.03.28</div><h3>神殿花鳥『ゲスラブ』動画を公開</h3>
+   <p>『【神殿花鳥】彼女争奪戦ゲーム‼『ゲットスイートラブ』であの娘のハートを射止めろ‼』を公開。再生数は約51.9万回で、チャンネル歴代5位（再生数は2026年11月27日時点）。</p>
+   <div class="tags"><span class="tag">神殿花鳥</span><span class="tag">人気動画</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=MWmFnvdnDmI" target="_blank" rel="noopener">動画を見る</a></div>
+  </div></article>
+  <article class="item"><div class="year">2021</div><div class="event">
    <div class="date">2021.05.05</div><h3>高田村に初参加</h3>
-   <p>寝坊したふじみやさんの代打として、はたさこさんから声をかけられたことをきっかけに高田村へ初参加。</p>
+   <p>寝坊したふじみやの代打として、はたさこから声をかけられたことをきっかけに高田村へ初参加。</p>
    <div class="tags"><span class="tag">高田村</span><span class="tag">初参加</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki・なな湖</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96/%E9%AB%98%E7%94%B0%E6%9D%91%E5%8F%82%E5%8A%A0%E4%B8%80%E8%A6%A7" target="_blank" rel="noopener">高田村参加一覧</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=pxw9t6GzwVU" target="_blank" rel="noopener">初参加の配信（なな湖視点）</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki・なな湖</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96/%E9%AB%98%E7%94%B0%E6%9D%91%E5%8F%82%E5%8A%A0%E4%B8%80%E8%A6%A7" target="_blank" rel="noopener">高田村参加一覧</a></div>
+  </div></article>
+  <article class="item"><div class="year">2021</div><div class="event">
+   <div class="date">2021.05.08</div><h3>オンライン舞台『カタシロRebuild』に出演</h3>
+   <p>新クトゥルフ神話TRPG『カタシロ』のオンライン舞台化作品『カタシロRebuild』にマコト役で出演。共演はハヤシ、ヤマト イオリ（敬称略）。声のみの舞台出演という、実況者として異色のメディア展開。</p>
+   <div class="tags"><span class="tag">舞台</span><span class="tag">TRPG</span><span class="tag">カタシロ</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=awqMzm2SEms" target="_blank" rel="noopener">舞台アーカイブを見る</a><a href="https://wikiwiki.jp/piyo/%E3%82%B7%E3%83%8A%E3%83%AA%E3%82%AA/%E3%82%AB%E3%82%BF%E3%82%B7%E3%83%AD" target="_blank" rel="noopener">カタシロ マイテストWiki</a></div>
   </div></article>
   <article class="item"><div class="year">2021</div><div class="event">
    <div class="date">2021.08.31</div><h3>「語尾ングアス」を主催</h3>
    <p>Among Usの議論中や霊界で、参加者がランダムに指定された語尾を使う企画を主催。二次会マリオカートでの語尾の話題から生まれ、Xでもトレンド入りする話題となった。</p>
    <div class="tags"><span class="tag">高田村</span><span class="tag">Among Us</span><span class="tag">企画主催</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E7%94%A8%E8%AA%9E%E9%9B%86/%E3%81%8B%E8%A1%8C" target="_blank" rel="noopener">高田村wiki・語尾ングアス</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=j4q6Yg7zfD4" target="_blank" rel="noopener">配信アーカイブを見る</a><a href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E7%94%A8%E8%AA%9E%E9%9B%86/%E3%81%8B%E8%A1%8C" target="_blank" rel="noopener">高田村wiki・語尾ングアス</a></div>
   </div></article>
   <article class="item"><div class="year">2021</div><div class="event">
    <div class="date">2021.10.25</div><h3>NOT2としてRAFT初回配信</h3>
    <p>なな湖、おらふくん、たけぉ、高田健志(敬称略)によるグループ(？)、「NOT2」の初配信。グループ名を視聴者から募ったところ、「花吹雪」、「シリコンズ」、「バニーマン」などの候補も挙がった中からなし崩し的に定着した。</p>
    <div class="tags"><span class="tag">NOT2</span><span class="tag">RAFT</span><span class="tag">初配信</span></div>
-   <div class="links"><a class="primary" href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">なな湖YouTubeチャンネル</a><a href="https://x.com/search?q=from%3Aosya_775%20NOT2%20RAFT&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=Q5jeOYBB2lE" target="_blank" rel="noopener">初回配信を見る</a><a href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">なな湖YouTubeチャンネル</a><a href="https://x.com/search?q=from%3Aosya_775%20NOT2%20RAFT&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
   <article class="item"><div class="year">2021</div><div class="event">
    <div class="date">2021.11.02</div><h3>琵琶ちゃぷ10周年記念配信</h3>
    <p>コンビ結成10周年を記念した配信を実施。ぬーすけ先輩接待ングアスや、高田健志を交えた三者雑談などの企画が行われた。</p>
    <div class="tags"><span class="tag">記念配信</span><span class="tag">琵琶ちゃぷ</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">配信・アーカイブ情報</a><a href="https://x.com/search?q=from%3Aosya_775%20%E7%90%B5%E7%90%B6%E3%81%A1%E3%82%83%E3%81%B710%E5%91%A8%E5%B9%B4&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=xxsKIo17Lsk" target="_blank" rel="noopener">記念配信を見る</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">配信・アーカイブ情報</a><a href="https://x.com/search?q=from%3Aosya_775%20%E7%90%B5%E7%90%B6%E3%81%A1%E3%82%83%E3%81%B710%E5%91%A8%E5%B9%B4&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
   </div></article>
   <article class="item"><div class="year">2021</div><div class="event">
    <div class="date">2021.12.29</div><h3>「高田村バトルロワイアル」を企画</h3>
    <p>高田村メンバーについての妄想雑談から発展した大型企画。なな湖の発想・企画力が、参加型のゲーム企画として形になった。</p>
    <div class="tags"><span class="tag">高田村</span><span class="tag">大型企画</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E3%81%AE%E6%AD%B4%E5%8F%B2" target="_blank" rel="noopener">高田村の歴史・関連記録</a><a href="https://x.com/search?q=from%3Aosya_775%20%E9%AB%98%E7%94%B0%E6%9D%91%E3%83%90%E3%83%88%E3%83%AB%E3%83%AD%E3%83%AF%E3%82%A4%E3%82%A2%E3%83%AB&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=QVW4LJQjkXc" target="_blank" rel="noopener">配信アーカイブを見る</a><a href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E3%81%AE%E6%AD%B4%E5%8F%B2" target="_blank" rel="noopener">高田村の歴史・関連記録</a><a href="https://x.com/search?q=from%3Aosya_775%20%E9%AB%98%E7%94%B0%E6%9D%91%E3%83%90%E3%83%88%E3%83%AB%E3%83%AD%E3%83%AF%E3%82%A4%E3%82%A2%E3%83%AB&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
   </div></article>
   <article class="item" id="2022"><div class="year">2022</div><div class="event">
-   <div class="date">2022.11.26</div><h3>「たからじ崩壊ライブ」に出演</h3>
-   <p>品行村初のリアルイベントとして品川ステラボールで開催。なな湖さんは品行崩壊・高田村のメンバーらとともに出演した。</p>
-   <div class="tags"><span class="tag">品行崩壊</span><span class="tag">リアルイベント</span><span class="tag">ライブ</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/hinkou/%E3%82%B3%E3%83%A9%E3%83%9C%E4%BC%81%E7%94%BB" target="_blank" rel="noopener">品行崩壊wiki・コラボ企画</a></div>
+   <div class="date">2022.01.16</div><h3>主催企画「ドラゴンなな湖」を開催</h3>
+   <p>なな湖が主催した就活情報バラエティ企画。受講生は高田健志・しんたろー・ふじみや、ゲスト講師にラパルフェ都留拓也（敬称略）を迎えた。</p>
+   <div class="tags"><span class="tag">高田村</span><span class="tag">企画主催</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=a7rhPJwsE7w" target="_blank" rel="noopener">配信アーカイブを見る</a><a href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E3%81%AE%E6%AD%B4%E5%8F%B2" target="_blank" rel="noopener">高田村wiki「高田村の歴史」</a></div>
   </div></article>
   <article class="item"><div class="year">2022</div><div class="event">
-   <div class="date">2022.12.30</div><h3>「高田村バトルロワイアル2」を主催</h3>
-   <p>前年に続くPUBG大会の第2回。11チーム44名が参加し、「#高田村バトロワ」がXでトレンド1位となった。</p>
-   <div class="tags"><span class="tag">高田村</span><span class="tag">PUBG</span><span class="tag">大型企画</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E4%BC%81%E7%94%BB%E3%83%BB%E3%82%B3%E3%83%A9%E3%83%9C%E4%B8%80%E8%A6%A7/2022%E5%B9%B4" target="_blank" rel="noopener">高田村wiki・2022年企画一覧</a></div>
+   <div class="date">2022.03.25</div><h3>YouTubeチャンネル登録者10万人を突破</h3>
+   <p>主催企画「高田以外全員泥酔アモアス」の終了後の雑談中、チャンネル登録者数が10万人を突破。本人はそのまま寝落ちし、Xでは「湖さん10万人」がトレンド入りした。</p>
+   <div class="tags"><span class="tag">YouTube</span><span class="tag">登録者10万人</span><span class="tag">節目</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=fpa4jNqOmbY" target="_blank" rel="noopener">10万人突破の配信を見る</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
   </div></article>
-  <article class="item" id="2022"><div class="year">2022</div><div class="event">
+  <article class="item"><div class="year">2022</div><div class="event">
    <div class="date">2022.04</div><h3>琵琶ちゃぷサブチャンネル「ファーム」開設</h3>
    <p>「琵琶湖ちゃぷちゃぷブラザーズ〖ファーム〗」が開設され、ぬーすけ先輩が運用。メインチャンネルとは別の動画活動の場が加わる。</p>
    <div class="tags"><span class="tag">YouTube</span><span class="tag">琵琶ちゃぷ</span></div>
    <div class="links"><a class="primary" href="https://www.youtube.com/@nanaco775nanaco" target="_blank" rel="noopener">ファーム</a></div>
   </div></article>
   <article class="item"><div class="year">2022</div><div class="event">
+   <div class="date">2022.04</div><h3>メンバーシップ「オフィスN株主」を開設</h3>
+   <p>YouTubeチャンネルのメンバーシップ「オフィスN株主」を開設。加入者は「株主」と呼ばれ、後のファンミーティング「オフィスN株主総会」へとつながっていく。</p>
+   <div class="tags"><span class="tag">メンバーシップ</span><span class="tag">オフィスN株主</span><span class="tag">YouTube</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">チャンネルを見る</a></div>
+  </div></article>
+  <article class="item"><div class="year">2022</div><div class="event">
+   <div class="date">2022.05.22</div><h3>人狼最大トーナメント×高田村コラボで初のMVPを獲得</h3>
+   <p>約4年ぶりに人狼最大トーナメントへ出演した高田村コラボ回で、トータルMVP投票1位となり初のMVPを獲得。人狼プレイヤーとしての実力を示した復帰戦となった。</p>
+   <div class="tags"><span class="tag">人狼最大トーナメント</span><span class="tag">高田村</span><span class="tag">MVP</span></div>
+   <div class="links"><a class="primary" href="https://www.nicovideo.jp/watch/so40509006" target="_blank" rel="noopener">公式アーカイブ（ニコニコ・1/7）</a><a href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E3%81%AE%E6%AD%B4%E5%8F%B2" target="_blank" rel="noopener">高田村wiki「高田村の歴史」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2022</div><div class="event">
+   <div class="date">2022.09.25</div><h3>ラジオ番組「たからじ」が放送開始</h3>
+   <p>高田健志（MC）となな湖（サブMC）による週1ラジオ「たからじ」が高田健志のチャンネルで開始（毎週日曜18:00、本編後のアフタートークはなな湖のチャンネルで配信）。同年11月の「たからじ崩壊ライブ」はこの番組のイベントにあたる。</p>
+   <div class="tags"><span class="tag">たからじ</span><span class="tag">ラジオ</span><span class="tag">高田村</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=Gz_PVmzDTIE" target="_blank" rel="noopener">第1回・本編を聴く</a><a href="https://www.youtube.com/watch?v=sZWptU1IC58" target="_blank" rel="noopener">第1回・アフタートーク</a><a href="https://wikiwiki.jp/takadamura/%E9%AB%98%E7%94%B0%E6%9D%91%E3%81%AE%E6%AD%B4%E5%8F%B2" target="_blank" rel="noopener">高田村wiki「高田村の歴史」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2022</div><div class="event">
    <div class="date">2022.10 / 2022.12.03</div><h3>TikTok開設、初のリアルイベント「BIWA」開催</h3>
    <p>10月に琵琶ちゃぷのTikTokを開設。12月3日にはサンリオピューロランドで、琵琶ちゃぷ初のリアルイベント「BIWA」を開催した。</p>
    <div class="tags"><span class="tag">リアルイベント</span><span class="tag">TikTok</span></div>
-   <div class="links"><a class="primary" href="https://www.tiktok.com/@nanaco775" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/search?q=from%3Aosya_775%20BIWA%20%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%83%A9%E3%83%B3%E3%83%89&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=RIX3vI9CyHo" target="_blank" rel="noopener">BIWA行き帰りドライブVlog</a><a href="https://www.youtube.com/watch?v=YIkasrfbq88" target="_blank" rel="noopener">差し入れ開封・BIWA編（琵琶さぶ）</a><a href="https://www.tiktok.com/@nanaco775" target="_blank" rel="noopener">TikTok</a><a href="https://x.com/search?q=from%3Aosya_775%20BIWA%20%E3%83%94%E3%83%A5%E3%83%BC%E3%83%AD%E3%83%A9%E3%83%B3%E3%83%89&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+  </div></article>
+  <article class="item"><div class="year">2022</div><div class="event">
+   <div class="date">2022.11.26</div><h3>「たからじ崩壊ライブ」に出演</h3>
+   <p>品行村初のリアルイベントとして品川ステラボールで開催。なな湖は品行崩壊・高田村のメンバーらとともに出演した。</p>
+   <div class="tags"><span class="tag">品行崩壊</span><span class="tag">リアルイベント</span><span class="tag">ライブ</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=lLReBAgUK2E" target="_blank" rel="noopener">密着Vlog</a><a href="https://www.youtube.com/watch?v=Zui0mPu6NRw" target="_blank" rel="noopener">裏配信アーカイブ</a><a href="https://wikiwiki.jp/hinkou/%E3%82%B3%E3%83%A9%E3%83%9C%E4%BC%81%E7%94%BB" target="_blank" rel="noopener">品行崩壊wiki・コラボ企画</a></div>
+  </div></article>
+  <article class="item"><div class="year">2022</div><div class="event">
+   <div class="date">2022.12.21</div><h3>高田村コラボカフェ（アニメイトカフェ）が開催</h3>
+   <p>なな湖が以前から「高田村でコラボカフェをしたい」と繰り返し語り、ついに実現したアニメイトカフェでの高田村コラボカフェ（池袋3号店・名古屋2号店、2023年1月9日まで。好評につき2月12日まで延長）。</p>
+   <div class="tags"><span class="tag">高田村</span><span class="tag">コラボカフェ</span><span class="tag">アニメイトカフェ</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=x_xZyrPaGss" target="_blank" rel="noopener">試食会の動画を見る</a><a href="https://collabo-cafe.com/events/collabo/takadamura-animate-cafe2022/" target="_blank" rel="noopener">コラボカフェ情報</a></div>
+  </div></article>
+  <article class="item"><div class="year">2022</div><div class="event">
+   <div class="date">2022.12.30</div><h3>「高田村バトルロワイアル2」を主催</h3>
+   <p>前年に続くPUBG大会の第2回。11チーム44名が参加し、「#高田村バトロワ」がXでトレンド1位となった。</p>
+   <div class="tags"><span class="tag">高田村</span><span class="tag">PUBG</span><span class="tag">大型企画</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=mdj0sSw01BY" target="_blank" rel="noopener">なな湖視点アーカイブ</a><a href="https://wikiwiki.jp/takadamura/%E4%BC%81%E7%94%BB%E3%83%BB%E3%82%B3%E3%83%A9%E3%83%9C%E4%B8%80%E8%A6%A7/2022%E5%B9%B4" target="_blank" rel="noopener">高田村wiki・2022年企画一覧</a></div>
   </div></article>
   <article class="item" id="2023"><div class="year">2023</div><div class="event">
-   <div class="date">2023.04.09 / 2023.05.05 / 2023.11.26</div><h3>琵琶ちゃぷライブ「緑龍（ちぇんろん）」開催</h3>
-   <p>琵琶湖ちゃぷちゃぷブラザーズによるライブイベント「緑龍（ちぇんろん）」を各地で開催。</p>
-   <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">主催イベント</span><span class="tag">ライブ</span></div>
-   <div class="links"><a class="primary" href="https://x.com/search?q=from%3Aosya_775%20%E3%81%A1%E3%81%87%E3%82%93%E3%82%8D%E3%82%93&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+   <div class="date">2023.02.20</div><h3>週1回の琵琶ちゃぷゲーム配信が開始</h3>
+   <p>毎週月曜21時頃から、なな湖とぬーすけ先輩の2人でゲームを遊ぶ定期配信が開始。初回タイトルは『完全爆弾解除マニュアル（Keep Talking and Nobody Explodes）』。コンビとしての定期活動の柱になった。</p>
+   <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">定期配信</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=_czuSuIT2CY" target="_blank" rel="noopener">初回配信を見る</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.04.09</div><h3>琵琶ちゃぷライブ「緑龍（ちぇんろん）」横浜公演</h3>
+   <p>琵琶湖ちゃぷちゃぷブラザーズによるライブイベント「緑龍（ちぇんろん）」の初回公演を、KT Zepp Yokohamaで昼・夜2部制で開催した。</p>
+   <div class="tags"><span class="tag">ライブ</span><span class="tag">琵琶ちゃぷ</span><span class="tag">イベント</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=77AEcFDBOP0" target="_blank" rel="noopener">前夜祭配信を見る</a><a href="https://www.youtube.com/watch?v=LKWjLNMtfOg" target="_blank" rel="noopener">差し入れ開封・ちぇんろん編（琵琶さぶ）</a><a href="https://x.com/search?q=from%3Aosya_775%20%E3%81%A1%E3%81%87%E3%82%93%E3%82%8D%E3%82%93&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.05.03</div><h3>初のオリジナルソング『美しいゆえに』を公開</h3>
+   <p>なな湖初のオリジナルソング『美しいゆえに』をYouTubeで公開。作詞はなな湖とMacaroni&amp;Cheese、作曲はMacaroni&amp;Cheese。2日後のワンマンライブ「そんな夜」に向けた、音楽活動の節目となった。</p>
+   <div class="tags"><span class="tag">音楽活動</span><span class="tag">オリジナルソング</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=tTYXQAYJfzI" target="_blank" rel="noopener">動画を見る</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
   </div></article>
   <article class="item"><div class="year">2023</div><div class="event">
    <div class="date">2023.05.05</div><h3>ワンマンライブ「そんな夜」開催</h3>
@@ -191,16 +342,40 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
    <div class="links"><a class="primary" href="https://youtube.com/playlist?list=PLrieqW2epeU-rprePi0KKggbA3Jxbx9PR&si=1W3DZwVaBXEuALsW" target="_blank" rel="noopener">セトリ再生リスト</a></div>
   </div></article>
   <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.05.05</div><h3>琵琶ちゃぷライブ「緑龍（ちぇんろん）」大阪公演</h3>
+   <p>「緑龍（ちぇんろん）」の大阪公演をGORILLA HALL OSAKAで開催。終演後には、同じ会場でなな湖のワンマンライブ「そんな夜」も行われた。</p>
+   <div class="tags"><span class="tag">ライブ</span><span class="tag">琵琶ちゃぷ</span><span class="tag">イベント</span></div>
+   <div class="links"><a class="primary" href="https://x.com/search?q=from%3Aosya_775%20%E3%81%A1%E3%81%87%E3%82%93%E3%82%8D%E3%82%93&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
    <div class="date">2023.06.04</div><h3>「アモアス勢ポケカリーグ」を主催</h3>
    <p>ポケモンカードの非公式大会を主催。16名が参加し、晴れる屋2がスポンサー、スタジオオンサイトが制作を担当した。</p>
    <div class="tags"><span class="tag">ポケモンカード</span><span class="tag">大会主催</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E4%BC%81%E7%94%BB%E3%83%BB%E3%82%B3%E3%83%A9%E3%83%9C%E4%B8%80%E8%A6%A7/2023%E5%B9%B4" target="_blank" rel="noopener">高田村wiki・2023年企画一覧</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=yxlw-ZExf3U" target="_blank" rel="noopener">感想枠を見る</a><a href="https://www.youtube.com/watch?v=VsfE6rOgyUM" target="_blank" rel="noopener">告知動画</a><a href="https://wikiwiki.jp/takadamura/%E4%BC%81%E7%94%BB%E3%83%BB%E3%82%B3%E3%83%A9%E3%83%9C%E4%B8%80%E8%A6%A7/2023%E5%B9%B4" target="_blank" rel="noopener">高田村wiki・2023年企画一覧</a></div>
   </div></article>
-  <article class="item" id="2023"><div class="year">2023</div><div class="event">
+  <article class="item"><div class="year">2023</div><div class="event">
    <div class="date">2023.06.24</div><h3>32歳の誕生日にリアル凸待ち企画</h3>
    <p>スタジオを借り、昼夜にわたるリアル凸待ちを企画。配信者仲間が訪れ、誕生日を祝うにぎやかなイベントとなった。</p>
    <div class="tags"><span class="tag">誕生日企画</span><span class="tag">リアルイベント</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/hinkou/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E4%B8%80%E8%A6%A7/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">企画の記録</a><a href="https://x.com/search?q=from%3Aosya_775%20%E5%87%B8%E5%BE%85%E3%81%A1&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=LXCchyhutKw" target="_blank" rel="noopener">当日の配信を見る</a><a href="https://wikiwiki.jp/hinkou/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E4%B8%80%E8%A6%A7/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">企画の記録</a><a href="https://x.com/search?q=from%3Aosya_775%20%E5%87%B8%E5%BE%85%E3%81%A1&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.06.28</div><h3>スペフェス全体曲『OneTimeMemory』に参加</h3>
+   <p>ちゃげぽよ。主催ライブ「ボクらのスペースフェスティバル（第3回）」の全体曲『OneTimeMemory』に歌唱参加。MVはちゃげぽよ。のYouTubeチャンネルで公開された。歌唱はなな湖、ちゃげぽよ。、影。/かげまる、GEN、ハッチャン、詩人さん、紅月サクヤ、なつぴょん（敬称略）の8名。作詞・作曲はHYBRID SENSE。2024年3月にはサブスク配信も開始された。</p>
+   <div class="tags"><span class="tag">音楽活動</span><span class="tag">コラボ曲</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=dT4UMAMLONk" target="_blank" rel="noopener">MVを見る</a><a href="https://linkco.re/Pa5ytZ6n" target="_blank" rel="noopener">配信リンク集</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.08.13</div><h3>第2弾オリジナルソング『風青し』を公開</h3>
+   <p>オリジナルソング第2弾『風青し（かぜあおし）』をYouTubeで公開。作詞はBlueNo / 青野雅人となな湖、作曲はBlueNo / 青野雅人。翌日にはツーマンライブ「なまおと」初回を控えた時期のリリースとなった。</p>
+   <div class="tags"><span class="tag">音楽活動</span><span class="tag">オリジナルソング</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=Fa_nH_KaTiE" target="_blank" rel="noopener">動画を見る</a><a href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.08.14</div><h3>ツーマンライブ「なまおと」初回を開催</h3>
+   <p>なな湖＆まお（敬称略）によるツーマンライブ「なまおと」の初回が恵比寿LIQUIDROOMで開催（昼夜2部）。以降も続く人気シリーズの起点で、2024年の「なまおとSP」はこのシリーズの特別編にあたる。</p>
+   <div class="tags"><span class="tag">なまおと</span><span class="tag">ツーマンライブ</span><span class="tag">音楽活動</span></div>
+   <div class="links"><a class="primary" href="https://www.liquidroom.net/schedule/2023/08" target="_blank" rel="noopener">LIQUIDROOM公式スケジュール</a></div>
   </div></article>
   <article class="item"><div class="year">2023</div><div class="event">
    <div class="date">2023.11.24</div><h3>実況活動15周年記念動画を公開</h3>
@@ -209,60 +384,132 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
    <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=5JiGCC6aJy4" target="_blank" rel="noopener">記念動画を見る</a><a href="https://x.com/search?q=from%3Aosya_775%20%2215%E5%91%A8%E5%B9%B4%22&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
   </div></article>
   <article class="item"><div class="year">2023</div><div class="event">
+   <div class="date">2023.11.26</div><h3>琵琶ちゃぷライブ「緑龍（ちぇんろん）」名古屋公演</h3>
+   <p>「緑龍（ちぇんろん）」の名古屋公演を、Niterra日本特殊陶業市民会館ビレッジホールで開催。2023年のツアーの最終公演となった。</p>
+   <div class="tags"><span class="tag">ライブ</span><span class="tag">琵琶ちゃぷ</span><span class="tag">イベント</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=3cDRahOPRpw" target="_blank" rel="noopener">感想配信を見る</a><a href="https://x.com/search?q=from%3Aosya_775%20%E3%81%A1%E3%81%87%E3%82%93%E3%82%8D%E3%82%93&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+  </div></article>
+  <article class="item"><div class="year">2023</div><div class="event">
    <div class="date">2023.12.31 – 2024.01.01</div><h3>「みんなで年越し生ライブ」に出演</h3>
    <p>多数のゲーム実況者が参加する年越しライブイベントに出演。オフライン会場と配信を通じた大型コラボイベントとなった。</p>
    <div class="tags"><span class="tag">ライブイベント</span><span class="tag">ゲーム実況者</span></div>
-   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%B8%80%E8%A6%A7" target="_blank" rel="noopener">イベント記録・配信リンク</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=QAHMCCQEM2k" target="_blank" rel="noopener">配信アーカイブを見る</a><a href="https://wikiwiki.jp/takadamura/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E4%B8%80%E8%A6%A7" target="_blank" rel="noopener">イベント記録・配信リンク</a></div>
   </div></article>
   <article class="item" id="2024"><div class="year">2024</div><div class="event">
+   <div class="date">2024.01.04</div><h3>「大谷翔平アキネイター」動画が大ヒット</h3>
+   <p>『【ドッキリ】猟奇殺人鬼がお題のアキネイタークイズだと思い込ませて大谷翔平の問題を出してみたwwww』を公開。再生数は約89.5万回で、チャンネル歴代2位（再生数は2026年11月27日時点）。</p>
+   <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">人気動画</span><span class="tag">アキネイター</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=0RPK_Jk3jWo" target="_blank" rel="noopener">動画を見る</a></div>
+  </div></article>
+  <article class="item"><div class="year">2024</div><div class="event">
    <div class="date">2024.03.24</div><h3>「ちぇんろん The Final」開催</h3>
-   <p>琵琶ちゃぷによる「ちぇんろん」シリーズのファイナル公演を東京で開催。</p>
+   <p>琵琶ちゃぷによる「ちぇんろん」シリーズのファイナル公演を、東京・昭和女子大学 人見記念講堂で開催。2023年のツアーから続いたライブシリーズに幕を下ろした。</p>
    <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">ライブ</span><span class="tag">ファイナル</span></div>
-   <div class="links"><a class="primary" href="https://x.com/search?q=from%3Aosya_775%20%E3%81%A1%E3%81%87%E3%82%93%E3%82%8D%E3%82%93%20The%20Final&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=gjqnaaZ3GgE" target="_blank" rel="noopener">後夜祭配信を見る</a><a href="https://www.youtube.com/watch?v=NM2-AUzGXGE" target="_blank" rel="noopener">直前スペシャル配信</a><a href="https://x.com/search?q=from%3Aosya_775%20%E3%81%A1%E3%81%87%E3%82%93%E3%82%8D%E3%82%93%20The%20Final&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
+  </div></article>
+  <article class="item"><div class="year">2024</div><div class="event">
+   <div class="date">2024.09.28</div><h3>「実家再現」あつ森企画が話題に</h3>
+   <p>ぬーすけ先輩が作った島に、なな湖の実家が再現されていたというドッキリ動画を公開。琵琶ちゃぷらしい企画性の強い動画として注目を集めた。再生数は約93.6万回に達し、チャンネルで最も再生された動画となっている（2026年11月27日時点）。</p>
+   <div class="tags"><span class="tag">動画企画</span><span class="tag">あつまれ どうぶつの森</span><span class="tag">人気動画</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=Kw5vbAyBpwU" target="_blank" rel="noopener">動画を見る</a><a href="https://x.com/search?q=from%3Aosya_775%20%E5%AE%9F%E5%AE%B6%E5%86%8D%E7%8F%BE&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
+  </div></article>
+  <article class="item"><div class="year">2024</div><div class="event">
+   <div class="date">2024.11.03</div><h3>3人曲『逢いの歌』を公開</h3>
+   <p>スナザメ、なな湖、フルコン（敬称略）の3人によるオリジナル曲『逢いの歌』を、スナザメのYouTubeチャンネルで公開。作詞・作曲はスナザメ、編曲はHYBRID SENSE。「なまおとSP」で歌うために作られた「アイドル風オリ曲」の第1弾。</p>
+   <div class="tags"><span class="tag">音楽活動</span><span class="tag">コラボ曲</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=RUkHFFhRz3k" target="_blank" rel="noopener">動画を見る</a><a href="https://wikiwiki.jp/hinkou/%E9%9F%B3%E6%A5%BD%E7%B3%BB" target="_blank" rel="noopener">品行崩壊wiki「音楽系」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2024</div><div class="event">
+   <div class="date">2024.11.12</div><h3>3人曲『ハイテンションガール！』を公開</h3>
+   <p>スナザメ、なな湖、フルコン（敬称略）による「アイドル風オリ曲」第2弾『ハイテンションガール！』を、スナザメのYouTubeチャンネルで公開。作詞はスナザメ、作曲はスナザメとHYBRID SENSE、編曲はHYBRID SENSE。「なまおとSP」（11月18日）の直前のリリースとなった。</p>
+   <div class="tags"><span class="tag">音楽活動</span><span class="tag">コラボ曲</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=mWM1DzYxpcE" target="_blank" rel="noopener">動画を見る</a><a href="https://wikiwiki.jp/hinkou/%E9%9F%B3%E6%A5%BD%E7%B3%BB" target="_blank" rel="noopener">品行崩壊wiki「音楽系」</a></div>
   </div></article>
   <article class="item"><div class="year">2024</div><div class="event">
    <div class="date">2024.11.18</div><h3>なな湖主催ライブ「なまおとSP」開催</h3>
-   <p>豊洲PITで開催。まおさん、フルコンさん、あっさりしょこさん、スナザメさん、めーやさんらが出演し、ハイブリさん、ねろちゃんさん、タラチオさんがゲスト参加した。</p>
+   <p>豊洲PITで開催。まお、フルコン、あっさりしょこ、スナザメ、めーや（敬称略）らが出演し、ハイブリ、ねろちゃん、タラチオ（敬称略）がゲスト参加した。</p>
    <div class="tags"><span class="tag">主催ライブ</span><span class="tag">音楽活動</span></div>
    <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=7FBd7Xsd0Lk" target="_blank" rel="noopener">ライブ舞台裏動画</a></div>
   </div></article>
-  <article class="item" id="2024"><div class="year">2024</div><div class="event">
-   <div class="date">2024.09.28</div><h3>「実家再現」あつ森企画が話題に</h3>
-   <p>ぬーすけ先輩が作った島に、なな湖の実家が再現されていたというドッキリ動画を公開。琵琶ちゃぷらしい企画性の強い動画として注目を集めた。</p>
-   <div class="tags"><span class="tag">動画企画</span><span class="tag">あつまれ どうぶつの森</span></div>
-   <div class="links"><a class="primary" href="https://www.youtube.com/@nanaco775/videos" target="_blank" rel="noopener">チャンネルの動画一覧</a><a href="https://x.com/search?q=from%3Aosya_775%20%E5%AE%9F%E5%AE%B6%E5%86%8D%E7%8F%BE&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
-  </div></article>
   <article class="item" id="2025"><div class="year">2025</div><div class="event">
+   <div class="date">2025.03.23</div><h3>第一回「オフィスN株主総会」を開催</h3>
+   <p>サンシャイン劇場で昼（14:00開演）・夜（18:00開演）の2部開催された、琵琶湖ちゃぷちゃぷブラザーズ初のファンミーティング。メンバーシップ「オフィスN株主」の会員イベントとして実施された。</p>
+   <div class="tags"><span class="tag">オフィスN株主</span><span class="tag">ファンミーティング</span></div>
+   <div class="links"><a class="primary" href="https://www.eventernote.com/events/422390" target="_blank" rel="noopener">Eventernote・イベントページ</a></div>
+  </div></article>
+  <article class="item"><div class="year">2025</div><div class="event">
    <div class="date">2025.06.14</div><h3>「高田村大運動会」に緑チームリーダーとして参加</h3>
-   <p>京王アリーナTOKYOで開催された高田村のリアルイベント。なな湖さんは緑チームのリーダーを務めた。企画は、なな湖さんを中心に複数メンバーが以前から実現を望んでいたもの。</p>
+   <p>京王アリーナTOKYOで開催された高田村のリアルイベント。なな湖は緑チームのリーダーを務めた。企画は、なな湖を中心に複数メンバーが以前から実現を望んでいたもの。</p>
    <div class="tags"><span class="tag">高田村</span><span class="tag">リアルイベント</span><span class="tag">チームリーダー</span></div>
    <div class="links"><a class="primary" href="https://realsound.jp/tech/2025/05/post-2000625.html/amp" target="_blank" rel="noopener">Real Sound・開催に向けたインタビュー</a></div>
   </div></article>
-  <article class="item" id="2025"><div class="year">2025</div><div class="event">
+  <article class="item"><div class="year">2025</div><div class="event">
    <div class="date">2025.06.30</div><h3>11年間勤めた会社を退職、新たな働き方へ</h3>
    <p>会社員として11年間勤めた職場を円満退職。以後は起業し、元勤務先から業務委託を受ける形で仕事を続けると紹介されている。ぬーすけ先輩も新会社の役員に就任する予定とされる。</p>
    <div class="tags"><span class="tag">転機</span><span class="tag">起業</span></div>
    <div class="links"><a class="primary" href="https://wikiwiki.jp/hinkou/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E4%B8%80%E8%A6%A7/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">プロフィール記載</a><a href="https://x.com/search?q=from%3Aosya_775%20%E9%80%80%E8%81%B7&src=typed_query" target="_blank" rel="noopener">本人Xの関連投稿を探す</a></div>
   </div></article>
   <article class="item"><div class="year">2025</div><div class="event">
+   <div class="date">2025.07.31</div><h3>OPENREC冠番組『なな湖のMusic Lake』が開始</h3>
+   <p>OPENRECの冠番組『なな湖のMusic Lake』が開始。第1回のゲストはフルコン、まお、スナザメ（敬称略）。音楽を軸にした定期番組として続き、2026年7月に1周年を迎えた。</p>
+   <div class="tags"><span class="tag">OPENREC</span><span class="tag">冠番組</span><span class="tag">音楽活動</span></div>
+   <div class="links"><a class="primary" href="https://www.openrec.tv/movie/e5rk9k1x9zv" target="_blank" rel="noopener">第1回アーカイブ</a></div>
+  </div></article>
+  <article class="item"><div class="year">2025</div><div class="event">
+   <div class="date">2025.08.03</div><h3>FGOクイズ動画を公開</h3>
+   <p>『【FGO】世界史が得意な後輩なら未プレイの「Fate/Grand Order」クイズも楽勝で回答できるのか検証してみたwwww』を公開。再生数は約56.5万回で、チャンネル歴代4位（再生数は2026年11月27日時点）。</p>
+   <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">人気動画</span><span class="tag">クイズ</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=lYCTF-bSOHI" target="_blank" rel="noopener">動画を見る</a></div>
+  </div></article>
+  <article class="item"><div class="year">2025</div><div class="event">
    <div class="date">2025.08.15</div><h3>品行崩壊リアルイベント「品行大崩壊」開催</h3>
-   <p>イベント内で披露されたゲーム「Hinko Love～コウヘイは誰のもの!?」のシナリオ調整・加筆修正を担当。</p>
+   <p>ゲーム実況者集団「品行崩壊」（リーダー：フルコン）初のリアルイベントが、パシフィコ横浜 国立大ホールで昼・夜2部制で開催され、出演した。現地17名・オンライン4名が出演し、なな湖はとりっぴぃチームでゲーム対決やクイズ対決に参加。第一部のドッキリ企画「Hinko Love」ではシナリオの調整・加筆も担当した。PIA LIVE STREAMでも生配信された。</p>
    <div class="tags"><span class="tag">品行崩壊</span><span class="tag">リアルイベント</span><span class="tag">シナリオ制作</span></div>
    <div class="links"><a class="primary" href="https://wikiwiki.jp/hinkou/%E5%93%81%E8%A1%8C%E5%A4%A7%E5%B4%A9%E5%A3%8A" target="_blank" rel="noopener">品行崩壊wiki・イベント記録</a></div>
   </div></article>
+  <article class="item"><div class="year">2025</div><div class="event">
+   <div class="date">2025.09.19 – 10.26</div><h3>「高田村×QuizKnock トーキョーディスカバリーシティ！2025」に参加</h3>
+   <p>東京ドームシティで開催されたQuizKnock主催イベントに高田村がコラボ参加。なな湖は高田健志・たけぉ（敬称略）と「太陽チーム」としてボイスラリーに出演し、10月5日にはコラボステージにも登壇した。</p>
+   <div class="tags"><span class="tag">高田村</span><span class="tag">QuizKnock</span><span class="tag">コラボイベント</span></div>
+   <div class="links"><a class="primary" href="https://tokyo-discovery-city.quizknock.com/events/takadamura/" target="_blank" rel="noopener">イベント公式サイト</a></div>
+  </div></article>
   <article class="item" id="2026"><div class="year">2026</div><div class="event">
+   <div class="date">2026.03.22</div><h3>第二回「オフィスN株主総会」を開催</h3>
+   <p>HULIC HALL TOKYOで第二回となるファンミーティング「オフィスN株主総会」を開催。第一回（2025年）に続く、メンバーシップ会員向けの大型イベント。</p>
+   <div class="tags"><span class="tag">オフィスN株主</span><span class="tag">ファンミーティング</span></div>
+   <div class="links"><a class="primary" href="https://wikiwiki.jp/takadamura/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">高田村wiki「なな湖」</a></div>
+  </div></article>
+  <article class="item"><div class="year">2026</div><div class="event">
+   <div class="date">2026.06.25</div><h3>オリジナルソング『疾駆白駒』を公開</h3>
+   <p>オリジナルソング『疾駆白駒（しっくはっく）』をYouTubeで公開。作曲はMacaroni&amp;Cheese、作詞はなな湖とMacaroni&amp;Cheese。『美しいゆえに』と同じ布陣による楽曲で、3日後に控えたワンマンライブ「HEART」に向けたリリースとなった。</p>
+   <div class="tags"><span class="tag">音楽活動</span><span class="tag">オリジナルソング</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=7asmxC1s4EI" target="_blank" rel="noopener">動画を見る</a></div>
+  </div></article>
+  <article class="item"><div class="year">2026</div><div class="event">
    <div class="date">2026.06.28</div><h3>ワンマンライブ「HEART」開催</h3>
-   <p>横浜ベイホールでバンドセットによるワンマンライブを開催。昼はバースデイライブ、夜はソロライブという二部構成。</p>
+   <p>横浜ベイホールでバンドセットによるワンマンライブを開催。昼の部（14:45開演）はバースデイライブ、夜の部（18:00開演）はソロライブという二部構成で、ぬーすけ先輩も出演した。開催直前の6月25日には、新曲『疾駆白駒』も公開された。</p>
    <div class="tags"><span class="tag">音楽活動</span><span class="tag">ワンマンライブ</span></div>
    <div class="links"><a class="primary" href="https://openrec.co.jp/news/6485368725" target="_blank" rel="noopener">OPENREC公式・公演案内</a><a href="https://www.openrec.tv/stage/nanaco-heart" target="_blank" rel="noopener">チケット・公演ページ</a><a href="https://x.com/search?q=from%3Aosya_775%20HEART%20%E3%83%A9%E3%82%A4%E3%83%96&src=typed_query" target="_blank" rel="noopener">本人Xを検索</a></div>
   </div></article>
   <article class="item"><div class="year">2026</div><div class="event">
+   <div class="date">2026.10 – 12</div><h3>滋賀プレDC企画でオリジナルソングを制作</h3>
+   <p>JR西日本の「滋賀デスティネーションキャンペーン プレキャンペーン」PR企画「高田村ビワイチバトル！！」（2026年10〜12月）で、滋賀県出身のなな湖が、滋賀の魅力を表現したオリジナルソングを制作した。</p>
+   <div class="tags"><span class="tag">オリジナルソング</span><span class="tag">高田村</span><span class="tag">滋賀</span></div>
+   <div class="links"><a class="primary" href="https://www.sankei.com/pressrelease/prtimes/EBM6XMCVIJOGFCF5WN6XXVWHG4/" target="_blank" rel="noopener">PR TIMES・プレスリリース</a></div>
+  </div></article>
+  <article class="item"><div class="year">2026</div><div class="event">
    <div class="date">2026.10.05</div><h3>漫画『マリはカノジョになりたそうにモンスターを見ている』連載開始</h3>
-   <p>連載開始と同日、「これは他意なんですけど」として同作の制作に携わっていることをX上で公表。</p>
+   <p>連載開始と同日、「これは他意なんですけど」として同作の制作に携わっていることをX上で公表。ゲーム実況・音楽に続く、新しい表現の場への進出となった。</p>
    <div class="tags"><span class="tag">漫画</span><span class="tag">制作協力</span></div>
    <div class="links"><a class="primary" href="https://mechacomic.jp/books/307499" target="_blank" rel="noopener">漫画を読む（めちゃコミック）</a><a href="https://x.com/osya_775/status/2107033109665619976?a=cJs-LpRG6kcgE2KCr9A&s=46" target="_blank" rel="noopener">本人Xの発表ポスト</a></div>
   </div></article>
- </div>
+  <article class="item"><div class="year">2026</div><div class="event">
+   <div class="date">2026.11.02</div><h3>琵琶ちゃぷ結成15周年</h3>
+   <p>ぬーすけ先輩とのコンビ結成から15周年。記念の「祝い枠」配信が行われ、2011年の初投稿から続くコンビ活動の大きな節目となった。</p>
+   <div class="tags"><span class="tag">琵琶ちゃぷ</span><span class="tag">15周年</span><span class="tag">記念配信</span></div>
+   <div class="links"><a class="primary" href="https://www.youtube.com/watch?v=JaJZ0tr4iu8" target="_blank" rel="noopener">15周年祝い枠を見る</a><a href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">なな湖YouTube</a></div>
+  </div></article>
+</div>
  <div class="note">※年表は公開情報から確認できた主な節目を抜粋しています。すべての動画・配信を網羅したものではありません。Xのリンクの一部は、該当投稿そのものではなく本人アカウント内の検索結果です。アーカイブの削除・非公開化、URL変更等により視聴できない場合があります。</div>
  <section class="sources" id="sources">
   <h2>出典・参考資料</h2>
@@ -283,6 +530,16 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
    <li><a href="https://www.youtube.com/watch?v=5JiGCC6aJy4" target="_blank" rel="noopener">YouTube「黒歴史も15年続けたら人生の道になる【15周年】」</a> — 2023年11月24日公開の本人チャンネル動画。</li>
    <li><a href="https://openrec.co.jp/news/6485368725" target="_blank" rel="noopener">OPENREC公式「なな湖ワンマンライブ『HEART』」</a> — 2026年4月2日公演案内。</li>
    <li><a href="https://yutura.net/channel/30027/" target="_blank" rel="noopener">ユーチュラ「〖琵琶ちゃぷ〗なな湖なな湖」</a> — YouTubeチャンネル開設日等の補助資料。</li>
+   <li><a href="https://www.inside-games.jp/article/2022/02/12/136770.html" target="_blank" rel="noopener">インサイド「なな湖」紹介記事</a> — 『絶対に避けたい実況プレイマナー講座』のブレイクに関する記述。</li>
+   <li><a href="https://dic.nicovideo.jp/a/%E3%81%AA%E3%81%AA%E6%B9%96" target="_blank" rel="noopener">ニコニコ大百科「なな湖」</a> — ニコニコ時代の活動・公式出演情報（編集型の二次資料）。</li>
+   <li><a href="https://www.liquidroom.net/schedule/2023/08" target="_blank" rel="noopener">LIQUIDROOM公式スケジュール（2023年8月）</a> — ツーマンライブ「なまおと」初回の開催日・会場。</li>
+   <li><a href="https://www.eventernote.com/events/422390" target="_blank" rel="noopener">Eventernote「オフィスN株主総会」</a> — 第一回ファンミーティングの開催情報。</li>
+   <li><a href="https://tokyo-discovery-city.quizknock.com/events/takadamura/" target="_blank" rel="noopener">「高田村×QuizKnock トーキョーディスカバリーシティ！2025」公式サイト</a> — コラボ内容・出演情報。</li>
+   <li><a href="https://collabo-cafe.com/events/collabo/takadamura-animate-cafe2022/" target="_blank" rel="noopener">コラボカフェ情報「高田村×アニメイトカフェ」</a> — コラボカフェの期間・店舗。</li>
+   <li><a href="https://www.youtube.com/@nanaco775" target="_blank" rel="noopener">YouTube「〖琵琶ちゃぷ〗なな湖なな湖」</a> — 人気動画の再生数・公開日（2026年11月27日確認）。</li>
+   <li><a href="https://www.openrec.tv/movie/e5rk9k1x9zv" target="_blank" rel="noopener">OPENREC「なな湖のMusic Lake #1」</a> — 冠番組の初回配信（2025年7月31日）とゲスト情報。</li>
+   <li><a href="https://www.bsfuji.tv/biwachapu/" target="_blank" rel="noopener">BSフジ「琵琶ちゃぷ」ライブ公式ページ</a> — 「緑龍-ちぇんろん-」横浜公演の日程・会場。</li>
+   <li><a href="https://www.sankei.com/pressrelease/prtimes/EBM6XMCVIJOGFCF5WN6XXVWHG4/" target="_blank" rel="noopener">PR TIMES（JR西日本）「滋賀デスティネーションキャンペーン プレキャンペーン」</a> — 滋賀プレDC企画となな湖のオリジナルソング制作について。</li>
   </ol>
   <p class="note">出典の性質について：Wikiは編集型の二次資料、本人の動画・X・公式イベント告知は一次資料です。確定日が確認できない出来事は年単位の表記にとどめ、伝聞的な情報は断定を避けています。</p>
  </section>
@@ -298,6 +555,121 @@ footer{text-align:center;padding:28px 15px;background:#26351e;color:#e7e9d5;font
     if (year && year !== previousYear) item.classList.add('year-start');
     if (year) previousYear = year;
   });
+})();
+</script>
+
+<script>
+// 年表の検索・タグ絞り込み／「○年前の今日」／YouTubeサムネイル
+(() => {
+  const items = [...document.querySelectorAll('.timeline > .item')];
+  const searchBox = document.getElementById('searchBox');
+  const chipsBox = document.getElementById('tagChips');
+  const countLine = document.getElementById('countLine');
+  const noResults = document.getElementById('noResults');
+  let activeTag = '';
+
+  // --- サムネイル: 項目内の最初の動画リンク（YouTube/ニコニコ）から生成 ---
+  items.forEach(item => {
+    let thumbSrc = null, target = null;
+    for (const x of item.querySelectorAll('.links a')) {
+      let m = x.href.match(/(?:v=|youtu\.be\/|\/live\/)([\w-]{11})/);
+      if (m) { thumbSrc = 'https://i.ytimg.com/vi/' + m[1] + '/hqdefault.jpg'; target = x; break; }
+      m = x.href.match(/nicovideo\.jp\/watch\/(?:sm|so)(\d+)/);
+      if (m) { thumbSrc = 'https://nicovideo.cdn.nimg.jp/thumbnails/' + m[1] + '/' + m[1]; target = x; break; }
+    }
+    if (!target) return;
+    const link = document.createElement('a');
+    link.className = 'thumb'; link.href = target.href; link.target = '_blank'; link.rel = 'noopener';
+    const img = document.createElement('img');
+    img.src = thumbSrc;
+    img.alt = ''; img.loading = 'lazy';
+    img.onerror = () => link.remove();
+    link.appendChild(img);
+    const event = item.querySelector('.event');
+    event.insertBefore(link, event.children[2] || null);
+  });
+
+  // --- タグチップ生成 ---
+  const tagCount = {};
+  items.forEach(item => item.querySelectorAll('.tag').forEach(t => {
+    const name = t.textContent.trim();
+    tagCount[name] = (tagCount[name] || 0) + 1;
+  }));
+  const tagSet = new Set(Object.keys(tagCount).filter(t => tagCount[t] >= 2));
+  const allChip = document.createElement('button');
+  allChip.className = 'chip active'; allChip.textContent = 'すべて'; allChip.type = 'button';
+  allChip.addEventListener('click', () => { activeTag = ''; apply(); });
+  chipsBox.appendChild(allChip);
+  [...tagSet].sort().forEach(tag => {
+    const b = document.createElement('button');
+    b.className = 'chip'; b.textContent = tag; b.type = 'button'; b.dataset.tag = tag;
+    b.addEventListener('click', () => { activeTag = (activeTag === tag) ? '' : tag; apply(); });
+    chipsBox.appendChild(b);
+  });
+
+  function refreshYearStarts(visible) {
+    items.forEach(i => i.classList.remove('year-start'));
+    let prev = null;
+    visible.forEach(item => {
+      const y = item.querySelector('.year').textContent.trim();
+      if (y !== prev) { item.classList.add('year-start'); prev = y; }
+    });
+  }
+
+  function apply() {
+    const q = searchBox.value.trim().toLowerCase();
+    const visible = [];
+    items.forEach(item => {
+      const tags = [...item.querySelectorAll('.tag')].map(t => t.textContent.trim());
+      const text = item.textContent.toLowerCase();
+      const ok = (!activeTag || tags.includes(activeTag)) && (!q || text.includes(q));
+      item.style.display = ok ? '' : 'none';
+      if (ok) visible.push(item);
+    });
+    chipsBox.querySelectorAll('.chip').forEach(c => {
+      c.classList.toggle('active', (c.dataset.tag || '') === activeTag);
+    });
+    refreshYearStarts(visible);
+    countLine.textContent = visible.length + '件を表示中（全' + items.length + '件）';
+    noResults.style.display = visible.length ? 'none' : 'block';
+  }
+  searchBox.addEventListener('input', apply);
+  apply();
+
+  // --- ○年前の今日 ---
+  const box = document.getElementById('todayBox');
+  const now = new Date();
+  const todayMD = (now.getMonth() + 1) * 100 + now.getDate();
+  const annis = [];
+  items.forEach(item => {
+    const year = parseInt(item.querySelector('.year').textContent.trim(), 10);
+    const dateText = item.querySelector('.date').textContent;
+    const title = item.querySelector('h3').textContent;
+    const full = [...dateText.matchAll(/(\d{4})\.(\d{2})\.(\d{2})/g)].map(m => ({y: +m[1], md: (+m[2]) * 100 + (+m[3])}));
+    const short = [...dateText.matchAll(/(?<!\d)(\d{2})\.(\d{2})(?!\d)/g)]
+      .filter(m => !full.some(f => f.md === (+m[1]) * 100 + (+m[2])))
+      .map(m => ({y: year, md: (+m[1]) * 100 + (+m[2])}));
+    [...full, ...short].forEach(d => annis.push({...d, title, item}));
+  });
+  const todays = annis.filter(a => a.md === todayMD && a.y < now.getFullYear());
+  const fmt = md => Math.floor(md / 100) + '月' + (md % 100) + '日';
+  if (todays.length) {
+    box.innerHTML = '<div class="tb-label">○年前の今日</div>' + todays.map(a =>
+      '<div class="tb-title">' + (now.getFullYear() - a.y) + '年前の今日：' + a.title + '</div>').join('') +
+      '<div class="tb-sub">' + fmt(todayMD) + 'は、この年表の出来事が起きた日です。</div>';
+    box.hidden = false;
+  } else if (annis.length) {
+    const upcoming = annis.map(a => {
+      let diff = a.md - todayMD;
+      if (diff <= 0) diff += 10000; // 来年の同じ日として概算
+      return {...a, diff};
+    }).sort((x, y) => x.diff - y.diff)[0];
+    const days = Math.round((new Date(now.getFullYear(), Math.floor(upcoming.md / 100) - 1, upcoming.md % 100) - new Date(now.getFullYear(), now.getMonth(), now.getDate())) / 86400000);
+    const d = days >= 0 ? days : days + 365;
+    box.innerHTML = '<div class="tb-label">次の記念日</div><div class="tb-title">' + fmt(upcoming.md) + '：' + upcoming.title + '（' + upcoming.y + '年）</div>' +
+      '<div class="tb-sub">あと' + d + '日で、' + (now.getFullYear() - upcoming.y + (days >= 0 ? 0 : 1)) + '周年の記念日です。</div>';
+    box.hidden = false;
+  }
 })();
 </script>
 </body>
